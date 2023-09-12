@@ -25,22 +25,22 @@ public List<Integer> findPrimesInRange() {
 ## Исследование
 Ниже представлены графики взаимосвязи между количеством тредов и временем нахождения простых чисел в заданном диапазоне.
 
-[![An old rock in the desert](/assets/images/san-juan-mountains.jpg "San Juan Mountains")](https://drive.google.com/file/d/1vMDyybB5dJgoNpAlJ1qUmdPiGR7cI1vk/view?usp=sharing)
-[![An old rock in the desert](/assets/images/san-juan-mountains.jpg "San Juan Mountains")](https://drive.google.com/file/d/1ve0euFQpR4ln8i5UpXpSJ7uWAB0jGy94/view?usp=sharing)
+![Scatter plot for range 0 - 15000 with 25 threads](https://github.com/bumashka/PrimaryNumbers/assets/90649137/7611f6f8-d530-4586-900a-fedbdde4f170)
+![Scatter plot for range 0 - 100000 with 100 threads](https://github.com/bumashka/PrimaryNumbers/assets/90649137/e11e8648-cd37-4016-8e55-818b124c7388)
 
-Из графиков видно, что на большом диапозоне использование тредов в данной задаче оправдано, так как способно значительно увеличить скорость выполнения. При этом, начиная с определённого количества тредов график выходит
-на плато и всё большее количество тредов уже не улучшает времени.
 
-На графиках ниже видно, что задачи со слишком большим количеством тредов только ухудшает показатели. Это связано с затратами времени на создание тредов.
+Из графиков видно, что на большом диапозоне использование тредов в данной задаче оправдано, так как способно значительно увеличить скорость выполнения. При этом, начиная с определённого количества тредов график выходит на плато и всё большее количество тредов уже не улучшает времени.
 
-[![An old rock in the desert](/assets/images/san-juan-mountains.jpg "San Juan Mountains")](https://drive.google.com/file/d/1I4FFSMf5B2cLB3PkubzNtdGFQnAC0x9v/view?usp=sharing)
-[![An old rock in the desert](/assets/images/san-juan-mountains.jpg "San Juan Mountains")](https://drive.google.com/file/d/1MpkQCTKRHuq-ySbScjlIgeufcZnVzW1K/view?usp=sharing)
-[![An old rock in the desert](/assets/images/san-juan-mountains.jpg "San Juan Mountains")](https://drive.google.com/file/d/1EL3I0Pe7P76ikeTpqfQCG1z7A00CfUkh/view?usp=sharing)
+На графиках ниже видно, что слишком большое количество тредов только ухудшает показатели времени и начинает прослеживаться линейная зависимость. Это связано с затратами времени на создание тредов.
+
+![Scatter plot for range 0 - 1000 with 500 threads](https://github.com/bumashka/PrimaryNumbers/assets/90649137/febeacb2-4c20-4ed3-9a77-e83feadfd5c4)
+![Scatter plot for range 0 - 1000 with 100 threads](https://github.com/bumashka/PrimaryNumbers/assets/90649137/ac7307c3-99a1-4b5d-be2f-7fd475b34020)
+![Scatter plot for range 0 - 1000 with 25 threads](https://github.com/bumashka/PrimaryNumbers/assets/90649137/6ee56912-bf02-4829-80ba-a48e83965b8e)
 
 
 ## Выводы
-Несмотря на то, что задача нахождения простых чисел довольно тривиальная, на ней очень хорошо проявляется зависимость времени выполнения программы и количеством используемых тредов. Были сделаны выводы, что 
-большое количество тредов может даже ухудшить показатели эффективности.
+Несмотря на то, что задача нахождения простых чисел довольно тривиальная, на ней очень хорошо видна зависимость времени выполнения программы от количества используемых тредов. Были сделаны выводы, что 
+большое количество тредов ухудшает показатели времени выполнения данной задачи.
 
 
 
